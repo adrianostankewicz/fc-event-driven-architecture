@@ -3,7 +3,7 @@ package events
 import "time"
 
 type EventInterface interface {
-	GetName()
+	GetName() string
 	GetDateTime() time.Time
 	GetPayload() interface{}
 }
