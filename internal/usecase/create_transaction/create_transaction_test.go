@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"github.com/adrianostankewicz/fc-event-driven-architecture/internal/entity"
+	"github.com/adrianostankewicz/fc-event-driven-architecture/internal/event"
 	"github.com/adrianostankewicz/fc-event-driven-architecture/internal/usecase/mocks"
 	"github.com/adrianostankewicz/fc-event-driven-architecture/pkg/events"
 	"github.com/stretchr/testify/assert"
@@ -31,7 +32,6 @@ func TestCreateTransactionUseCase_Execute(t *testing.T) {
 
 	dispatcher := events.NewEventDispatcher()
 	eventTransaction := event.NewTransactionCreated()
-	eventBalance := event.NewBalanceUpdated()
 	ctx := context.Background()
 
 	uc := NewCreateTransactionUseCase(mockUow, dispatcher, eventTransaction, eventBalance)
