@@ -2,11 +2,11 @@
 
 Um projeto de arquitetura orientada a eventos desenvolvido em **Go**, demonstrando padrões e práticas para construir sistemas escaláveis e desacoplados.
 
-## 📋 Visão Geral
+## Visão Geral
 
-Este projeto implementa uma arquitetura baseada em eventos, permitindo que componentes se comuniquem de forma assíncrona e desacoplada. É uma excelente base para aprender e explorar padrões de microsserviços e sistemas distribuídos.
+Este projeto implementa uma arquitetura baseada em eventos, permitindo que componentes se comuniquem de forma assíncrona e desacoplada.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Linguagem**: Go 1.24.5
 - **HTTP Framework**: Chi (go-chi)
@@ -15,7 +15,7 @@ Este projeto implementa uma arquitetura baseada em eventos, permitindo que compo
 - **Containerização**: Docker & Docker Compose
 - **Testes**: Testify
 
-## 📦 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 fc-event-driven-architecture/
@@ -27,13 +27,7 @@ fc-event-driven-architecture/
 └── README.md
 ```
 
-## 🚀 Começando
-
-### Pré-requisitos
-
-- Go 1.24.5 ou superior
-- Docker e Docker Compose
-- MySQL (opcional, pode usar via Docker)
+## Como executar
 
 ### Instalação
 
@@ -73,21 +67,7 @@ go build -o app ./cmd/main.go
 ./app
 ```
 
-## 🧪 Testes
-
-Execute todos os testes com:
-
-```bash
-go test ./...
-```
-
-Com cobertura:
-
-```bash
-go test -cover ./...
-```
-
-## 🏗️ Arquitetura
+## Arquitetura
 
 A arquitetura segue o padrão **Event-Driven**, onde:
 
@@ -101,53 +81,3 @@ A arquitetura segue o padrão **Event-Driven**, onde:
 - **API**: Interface HTTP para interação externa
 - **Internal**: Lógica de negócio, handlers de eventos, repositórios
 - **Pkg**: Componentes reutilizáveis (utils, modelos, etc.)
-
-## 📊 Banco de Dados
-
-O projeto usa MySQL 5.7 com os seguintes serviços:
-
-- Host: `localhost`
-- Porta: `3306`
-- Root Password: `root`
-- Database: `wallet`
-- User: `root`
-
-## 📝 Dependências Principais
-
-| Pacote | Versão | Descrição |
-|--------|--------|-----------|
-| chi | v5.2.3 | Router HTTP |
-| google/uuid | v1.6.0 | Geração de UUIDs |
-| go-sql-driver/mysql | v1.9.3 | Driver MySQL |
-| mattn/go-sqlite3 | v1.14.32 | Driver SQLite |
-| testify | v1.11.1 | Framework de testes |
-
-## 📚 Recursos
-
-- [Go Documentation](https://golang.org/doc)
-- [Chi Router](https://github.com/go-chi/chi)
-- [Event-Driven Architecture Pattern](https://www.ibm.com/cloud/architecture/architectures/event-driven)
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-
-1. Fazer um Fork
-2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abrir um Pull Request
-
-## 📄 Licença
-
-Este projeto está disponível sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-## 👤 Autor
-
-**Adriano Stankewicz**
-
-- GitHub: [@adrianostankewicz](https://github.com/adrianostankewicz)
-
----
-
-**Última atualização**: Junho 2026
